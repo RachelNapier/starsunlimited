@@ -1,3 +1,6 @@
+/* ============================
+        GLOBAL STYLES
+   ============================ */
 * {
   margin: 0;
   padding: 0;
@@ -10,4 +13,21 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #777;
+}
+
+/* ============================
+        HEADER STYLES
+   ============================ */
+.header {
+  height: 95vh;
+  background-color: rgb(177, 191, 216, 0.8);
+  background-image: linear-gradient(
+      315deg,
+      rgba(177, 191, 216, 0.8) 0%,
+      rgb(103, 130, 180, 0.8) 74%
+    ),
+    url(../imgs/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
