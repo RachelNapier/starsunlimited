@@ -5,7 +5,6 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -17,11 +16,11 @@ body {
    ============================ */
 .header {
   height: 95vh;
-  background-color: rgb(177, 191, 216, 0.8);
+  background-color: rgb(177, 191, 216, 0.7);
   background-image: linear-gradient(
       315deg,
-      rgba(177, 191, 216, 0.8) 0%,
-      rgb(103, 130, 180, 0.8) 74%
+      rgba(177, 191, 216, 0.7) 0%,
+      rgb(103, 130, 180, 0.7) 74%
     ),
     url(../imgs/hero.jpg);
   background-size: cover;
@@ -38,4 +37,33 @@ body {
 
 .logo {
   height: 65px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #e6e8fa;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 20px;
+}
+
+.heading-primary-sub {
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 8px;
+  font-style: italic;
 }
