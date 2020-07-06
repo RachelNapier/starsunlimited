@@ -44,6 +44,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
@@ -51,6 +52,7 @@ body {
   text-transform: uppercase;
   color: #e6e8fa;
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -101,4 +103,29 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 20px;
+  border: 2px solid #6782b4;
+}
+
+.btn-white {
+  background-color: #e6e8fa;
+  color: #6782b4;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
 }
