@@ -1,4 +1,7 @@
 /* ============================
+        VARIABLES
+   ============================ */
+/* ============================
         GLOBAL STYLES
    ============================ */
 * {
@@ -17,15 +20,15 @@ body {
 }
 
 /* ============================
-        HEADER STYLES
-   ============================ */
+          HEADER STYLES
+     ============================ */
 .header {
   height: 95vh;
-  background-color: rgb(177, 191, 216, 0.7);
+  background-color: rgba(177, 191, 216, 0.7);
   background-image: linear-gradient(
       315deg,
       rgba(177, 191, 216, 0.7) 0%,
-      rgb(103, 130, 180, 0.7) 74%
+      rgba(103, 130, 180, 0.7) 74%
     ),
     url(../imgs/hero.jpg);
   background-size: cover;
@@ -33,23 +36,20 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
-
-.logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
-
-.logo {
-  height: 65px;
-}
-
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.header__logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.header__logo {
+  height: 65px;
 }
 
 .heading-primary {
@@ -59,19 +59,17 @@ body {
   backface-visibility: hidden;
   margin-bottom: 60px;
 }
-
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 48px;
   font-weight: 700;
-  letter-spacing: 16px;
+  letter-spacing: 20px;
   animation: moveInLeft 1s ease-out;
 }
-
-.heading-primary-sub {
+.heading-primary--sub {
   text-align: center;
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 8px;
   font-style: italic;
@@ -83,11 +81,9 @@ body {
     opacity: 0;
     transform: translateX(-100px);
   }
-
   80% {
     transform: translateX(10px);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -99,11 +95,9 @@ body {
     opacity: 0;
     transform: translateX(100px);
   }
-
   80% {
     transform: translateX(-10px);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -115,7 +109,6 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -129,21 +122,28 @@ body {
   padding: 18px 40px;
   display: inline-block;
   border-radius: 35px;
-  border: 2px solid #6782b4;
+  border: 2px solid #6782b4b3;
   position: relative;
 }
 
-.btn-white {
+.btn--white {
   background-color: #e6e8fa;
-  color: #6782b4;
+  color: #6782b4b3;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+}
+.btn--white::after {
+  background-color: #e6e8fa;
 }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 .btn:active {
@@ -164,16 +164,7 @@ body {
   transition: all 0.4s;
 }
 
-.btn-white::after {
-  background-color: #e6e8fa;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn-animated {
+.btn--animated {
   animation: moveUp 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
