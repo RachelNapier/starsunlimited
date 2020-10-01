@@ -1,0 +1,40 @@
+/* ============================
+          GLOBAL TYPOGRAPHY
+   ============================ */
+body {
+  padding: 3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray;
+}
+
+/* ============================
+          HEADER TYPOGRAPHY
+   ============================ */
+.heading-primary {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: $color-primary-light;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 2rem;
+    animation: moveInLeft 1s ease-out;
+  }
+
+  &--sub {
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    font-style: italic;
+    animation: moveInRight 1s ease-out;
+  }
+}
