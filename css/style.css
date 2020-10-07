@@ -1,22 +1,203 @@
 /* ============================
-        VARIABLES
+        COLORS
    ============================ */
+/* ============================
+        GRID
+   ============================ */
+/* ============================
+        HEADER ANIMATIONS
+   ============================ */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ============================
         GLOBAL STYLES
    ============================ */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* ============================
+          GLOBAL TYPOGRAPHY
+   ============================ */
+body {
+  padding: 3rem;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
+}
+
+/* ============================
+          HEADER TYPOGRAPHY
+   ============================ */
+.heading-primary {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #e6e8fa;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 2rem;
+  animation: moveInLeft 1s ease-out;
+}
+.heading-primary--sub {
+  text-align: center;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  font-style: italic;
+  animation: moveInRight 1s ease-out;
+}
+
+/* ============================
+          HEADER BTN STYLES
+   ============================ */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.8rem 4rem;
+  display: inline-block;
+  border-radius: 3.5rem;
+  border: 2px solid #6782b4b3;
+  position: relative;
+}
+
+.btn--white {
+  background-color: #e6e8fa;
+  color: #6782b4b3;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.btn--white::after {
+  background-color: #e6e8fa;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--animated {
+  animation: moveUp 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^="col-"] {
+  background-color: red;
+  float: left;
+}
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
 }
 
 /* ============================
@@ -45,126 +226,9 @@ body {
 }
 .header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 .header__logo {
-  height: 65px;
-}
-
-.heading-primary {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  color: #e6e8fa;
-  backface-visibility: hidden;
-  margin-bottom: 60px;
-}
-.heading-primary--main {
-  display: block;
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: 20px;
-  animation: moveInLeft 1s ease-out;
-}
-.heading-primary--sub {
-  text-align: center;
-  display: block;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 8px;
-  font-style: italic;
-  animation: moveInRight 1s ease-out;
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  80% {
-    transform: translateX(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 18px 40px;
-  display: inline-block;
-  border-radius: 35px;
-  border: 2px solid #6782b4b3;
-  position: relative;
-}
-
-.btn--white {
-  background-color: #e6e8fa;
-  color: #6782b4b3;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-}
-.btn--white::after {
-  background-color: #e6e8fa;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn--animated {
-  animation: moveUp 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
+  height: 3.5rem;
 }
