@@ -70,7 +70,7 @@ body {
    ============================ */
 body {
   padding: 3rem;
-  font-family: "Raleway", sans-serif;
+  font-family: '"Roboto"', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
@@ -81,27 +81,56 @@ body {
           HEADER TYPOGRAPHY
    ============================ */
 .heading-primary {
-  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  color: #e6e8fa;
+  color: #e4e6fa;
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
 .heading-primary--main {
+  font-family: "Kaushan Script", sans-serif;
   display: block;
   font-size: 5rem;
   font-weight: 700;
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
+  margin-bottom: 2rem;
   animation: moveInLeft 1s ease-out;
 }
 .heading-primary--sub {
   text-align: center;
   display: block;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 500;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5rem;
   font-style: italic;
   animation: moveInRight 1s ease-out;
+}
+
+/* ============================
+          ABOUT TYPOGRAPHY
+   ============================ */
+.heading-secondary {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  background-image: linear-gradient(to right, #5d8fd0, #375480);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
 }
 
 /* ============================
@@ -114,19 +143,19 @@ body {
   padding: 1.8rem 4rem;
   display: inline-block;
   border-radius: 3.5rem;
-  border: 2px solid #6782b4b3;
+  border: 2px solid #375480;
   position: relative;
 }
 
 .btn--white {
-  background-color: #e6e8fa;
-  color: #6782b4b3;
+  background-color: #e4e6fa;
+  color: #375480;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 2rem;
 }
 .btn--white::after {
-  background-color: #e6e8fa;
+  background-color: #e4e6fa;
 }
 
 .btn:hover {
@@ -163,7 +192,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto;
 }
 .row:not(:last-child) {
@@ -175,7 +203,6 @@ body {
   clear: both;
 }
 .row [class^="col-"] {
-  background-color: red;
   float: left;
 }
 .row [class^="col-"]:not(:last-child) {
@@ -205,11 +232,11 @@ body {
      ============================ */
 .header {
   height: 95vh;
-  background-color: rgba(177, 191, 216, 0.7);
+  background-color: rgba(93, 143, 208, 0.7);
   background-image: linear-gradient(
       315deg,
-      rgba(177, 191, 216, 0.7) 0%,
-      rgba(103, 130, 180, 0.7) 74%
+      rgba(93, 143, 208, 0.7) 0%,
+      rgba(55, 84, 128, 0.7) 74%
     ),
     url(../imgs/hero.jpg);
   background-size: cover;
@@ -231,4 +258,10 @@ body {
 }
 .header__logo {
   height: 3.5rem;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem;
+  margin-top: -20vh;
 }
