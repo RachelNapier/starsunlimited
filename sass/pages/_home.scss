@@ -19,4 +19,10 @@
     ),
     url(../imgs/stars-1.jpg);
   background-size: cover;
+  transform: skewY(-5deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(5deg);
+  }
 }
