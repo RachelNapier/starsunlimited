@@ -36,6 +36,30 @@
     }
   }
 
+  &--purple {
+    background-color: $color-white;
+    color: $color-secondary-dark;
+    font-weight: 700;
+    font-size: $default-font-size;
+    line-height: 2rem;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--orange {
+    background-color: $color-white;
+    color: $color-tertiary-dark;
+    font-weight: 700;
+    font-size: $default-font-size;
+    line-height: 2rem;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
