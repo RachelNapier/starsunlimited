@@ -28,6 +28,9 @@
   &__img {
     height: 100%;
     width: 100%;
+    transform: scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s;
   }
 
   &__text {
@@ -52,5 +55,10 @@
   &:hover &__caption {
     opacity: 1;
     transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%);
   }
 }
