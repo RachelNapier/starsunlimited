@@ -162,6 +162,22 @@ body {
   margin-top: 8rem;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 50%;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* ============================
           HEADER BTN STYLES
    ============================ */
@@ -195,6 +211,28 @@ body {
 }
 .btn--blue::after {
   background-color: #5584c1;
+}
+
+.btn--purple {
+  background-color: #eee;
+  color: #604e7b;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.btn--purple::after {
+  background-color: #eee;
+}
+
+.btn--orange {
+  background-color: #eee;
+  color: #dd7169;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.btn--orange::after {
+  background-color: #eee;
 }
 
 .btn:hover {
@@ -447,6 +485,64 @@ body {
   transform: translateY(-1.5rem) scale(1.03);
 }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(238, 238, 238, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+}
+.story > * {
+  transform: skewX(12deg);
+}
+.story__shape {
+  float: left;
+  height: 15rem;
+  width: 15rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  transform: translateX(-3rem) skewX(12deg);
+  position: relative;
+}
+.story__img {
+  height: 100%;
+  width: 100%;
+  transform: scale(1.4);
+  backface-visibility: hidden;
+  transition: all 0.5s;
+}
+.story__text {
+  transform: skewX(12deg);
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story__img {
+  transform: scale(1);
+  filter: blur(3px) brightness(80%);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -492,8 +588,8 @@ body {
   background-color: rgba(85, 132, 193, 0.7);
   background-image: linear-gradient(
       315deg,
-      rgba(85, 132, 193, 0.7) 0%,
-      rgba(55, 84, 128, 0.7) 74%
+      rgba(55, 84, 128, 0.7) 0%,
+      rgba(85, 132, 193, 0.7) 74%
     ),
     url(../imgs/hero.jpg);
   background-size: cover;
@@ -535,8 +631,8 @@ body {
   padding: 20rem 0;
   background-image: linear-gradient(
       315deg,
-      rgba(85, 132, 193, 0.7) 0%,
-      rgba(55, 84, 128, 0.7) 74%
+      rgba(228, 230, 250, 0.7) 0%,
+      rgba(85, 132, 193, 0.7) 74%
     ),
     url(../imgs/stars-1.jpg);
   background-size: cover;
@@ -554,4 +650,12 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+}
+
+/* ============================
+          STORIES STYLES 
+   ============================ */
+.section-stories {
+  position: relative;
+  padding: 15rem 0;
 }
