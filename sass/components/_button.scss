@@ -24,6 +24,18 @@
     }
   }
 
+  &--blue {
+    background-color: $color-primary;
+    color: $color-primary-light;
+    font-weight: 700;
+    font-size: $default-font-size;
+    line-height: 2rem;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
