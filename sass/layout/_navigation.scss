@@ -50,10 +50,35 @@
   }
 
   &__link {
-    font-size: 3rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $color-white;
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      color: $color-white;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 220%;
+      transition: all 0.4s;
+
+      span {
+        display: inline-block;
+        margin-right: 1.5rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
   }
 }
