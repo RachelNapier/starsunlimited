@@ -24,7 +24,6 @@
 
   &__right {
     width: 66.6666667%;
-    float: left;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
@@ -38,5 +37,15 @@
   &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 4em; //1em = 14px;
+    -moz-column-rule: 1px solid rgba($color-gray-2, 0.3);
+    column-count: 2;
+    column-gap: 4em; //1em = 14px;
+    column-rule: 1px solid rgba($color-gray-2, 0.3);
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }
