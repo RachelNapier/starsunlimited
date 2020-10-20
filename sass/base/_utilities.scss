@@ -7,10 +7,20 @@
 }
 .u-margin-bottom-md {
   margin-bottom: 4rem !important;
+
+  @include respond(tap-port) {
+    margin-bottom: 3rem !important;
+  }
 }
+
 .u-margin-bottom-lg {
   margin-bottom: 8rem !important;
+
+  @include respond(tap-port) {
+    margin-bottom: 5rem !important;
+  }
 }
+
 .u-margin-bottom-xlg {
   margin-bottom: 10rem !important;
 }
