@@ -99,6 +99,30 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="imgs/comp-1-sm.jpg 300w, imgs/comp-1-lg.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                alt="Photographer"
+                class="composition__photo composition__photo--p1"
+                src="imgs/comp-1-lg.jpg"
+              />
+
+              <img
+                srcset="imgs/comp-2-sm.jpg 300w, imgs/comp-2-lg.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                alt="Model"
+                class="composition__photo composition__photo--p2"
+                src="imgs/comp-2-lg.jpg"
+              />
+
+              <img
+                srcset="imgs/comp-3-sm.jpg 300w, imgs/comp-3-lg.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                alt="Actors"
+                class="composition__photo composition__photo--p3"
+                src="imgs/comp-3-lg.jpg"
+              />
+
+              <!--<img
                 src="imgs/comp-1-lg.jpg"
                 alt="photographer"
                 class="composition__photo composition__photo--p1"
@@ -112,7 +136,7 @@
                 src="imgs/comp-3-lg.jpg"
                 alt="actors"
                 class="composition__photo composition__photo--p3"
-              />
+              />-->
             </div>
           </div>
         </div>
@@ -415,7 +439,18 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="imgs/logo-1x.png" alt="Full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="imgs/logo-small-1x.png 1x, imgs/logo-small-2x.png 2x"
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="imgs/logo-sm.png 1x, imgs/logo-1x.png 2x"
+            alt="Full logo"
+            class="footer__logo"
+            src="imgs/logo-1x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
