@@ -74,7 +74,7 @@ Also, add in the required scripts into your <u>package.json</u> file, see exampl
 
 <div align="center">
 
-For more information on installing and setting up <strong>SASS</strong> and/or <Strong>SCSS</strong></strong> visit → [Sass installation](https://sass-lang.com/install).
+For more information on installing and setting up <strong>SASS</strong>, visit here → [Sass installation](https://sass-lang.com/install).
 
 To understand some of the basics of Sass first, checkout this [Sass Guide](https://sass-lang.com/guide).
 
