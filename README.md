@@ -1,10 +1,10 @@
 <!-- PROJECT SHIELDS -->
 
 ![GitHub version doc](https://img.shields.io/badge/Version-1.0.0-red)
-![GitHub last commit](https://img.shields.io/github/last-commit/RachelNapier/writers_block_landing_page?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/RachelNapier/stars-unlimited?style=flat-square)
 
 <!-- PROJECT LOGO -->
- 
+
 <br />
 <p align="center">
   <a href="https://rachelnapier.github.io/stars-unlimited/">
